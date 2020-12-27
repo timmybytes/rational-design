@@ -1,0 +1,23 @@
+.header {
+  background: palevioletred;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  &__logo {
+    max-width: 20px;
+    height: auto;
+  }
+  &__link {
+    font-size: 1rem;
+  }
+}
