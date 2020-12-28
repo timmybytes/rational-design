@@ -9,7 +9,17 @@
   border-bottom: 2px solid #444444;
   @media screen and (max-width: 400px) {
     flex-direction: column;
+    justify-content: center;
     align-items: stretch;
+    &__link {
+      margin: 0 auto;
+      margin-top: 0;
+    }
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
   }
   &__title {
     font-size: 1.5rem;
@@ -25,25 +35,34 @@
   }
   &__link {
     display: flex;
-    padding: 5px;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    background: #8bbbff;
-    border: 2px solid #444444;
-    color: #444444;
+    margin-top: 25px;
+    color: #252525;
     padding: 9px;
     border-radius: 4px;
-    box-shadow: 4px 4px 0 #444444;
-  }
-  span {
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    padding-right: 10px;
-    // border-bottom: 2px solid #444444;
-  }
-  svg {
-    // padding-left: 15px;
+    @media screen and (max-width: 400px) {
+      margin: 0 auto;
+      margin-top: 0;
+    }
+    span {
+      // font-family: 'Nunito';
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-right: 10px;
+      @media screen and (max-width: 400px) {
+        font-size: 1rem;
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 40px;
+      height: auto;
+      @media screen and (max-width: 400px) {
+        max-width: 25px;
+      }
+    }
   }
 }
