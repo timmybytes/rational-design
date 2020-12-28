@@ -24,7 +24,10 @@ You can use the app from the browser live here, or to run and configure locally,
 ### Fork and Clone Repo
 
 Fork and clone the repo to your local machine:
-`git clone https://github.com/timmybytes/rational-design.git`
+
+```sh
+git clone https://github.com/timmybytes/rational-design.git
+```
 
 `cd` into the repo, and install dependencies:
 
@@ -47,4 +50,4 @@ Feel free to submit a pull request if you want to add features or changes, thoug
 
 ## License
 
-Rational Design is available under the MIT license.
+Rational Design is available under the [MIT license](./LICENSE.md).
