@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ratios } from './ratios';
 import Header from './Header';
 
@@ -6,30 +6,30 @@ function App() {
   const [currentRatio, setCurrentRatio] = useState(ratios[1]);
   const [currentBaseSize, setCurrentBaseSize] = useState(16);
   const [currentScale, setCurrentScale] = useState([currentBaseSize]);
+  const ratioRef = useRef(currentRatio);
+  const sizeRef = useRef(currentBaseSize);
+  const scaleRef = useRef(currentScale);
 
   const handleRatioChange = e => {
-    let selected = e.target.value;
-    setCurrentRatio(selected);
+    setCurrentRatio(+e.target.value);
+    ratioRef.current = +e.target.value;
+    handleScaleChange();
   };
 
   const handleBaseSizeChange = e => {
-    setCurrentBaseSize(e.target.value);
-    fontBase(e.target.value);
+    sizeRef.current = +e.target.value;
+    setCurrentBaseSize(+e.target.value);
+    handleScaleChange();
   };
 
   const handleScaleChange = e => {
-    let increaser = e.target.value;
-    let arr = [currentBaseSize];
+    let increaser = e !== undefined ? +e.target.value : +currentScale.length;
+    let arr = [+sizeRef.current];
     for (let i = 1; i < increaser; i++) {
-      arr.push(Math.floor(arr[i - 1] * currentRatio * 100) / 100);
+      arr.push(Math.floor(arr[i - 1] * ratioRef.current * 100) / 100);
     }
     setCurrentScale(arr);
-  };
-
-  const fontBase = size => {
-    return {
-      fontSize: size,
-    };
+    scaleRef.current = arr;
   };
 
   return (
@@ -77,7 +77,9 @@ function App() {
               type='number'
               min='1'
               value={currentBaseSize}
-              onChange={handleBaseSizeChange}
+              onChange={e => {
+                handleBaseSizeChange(e);
+              }}
             />
           </div>
           <div className='settings__scale'>
@@ -90,11 +92,15 @@ function App() {
               type='number'
               min='1'
               max='20'
-              onChange={handleScaleChange}
+              onChange={e => {
+                handleScaleChange(e);
+              }}
               value={currentScale.length}
             />
           </div>
         </form>
+        <hr />
+
         <section className='examples'>
           {currentScale.map(scale => {
             return (
