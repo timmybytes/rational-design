@@ -13,9 +13,12 @@ const Header = () => {
       <header className='header'>
         <img className='header__logo' src={logo} alt='logo' />
         <nav className='header__links'>
-          <a className='header__links-link' href='#' onClick={handleClick}>
+          <button className='header__links-link' onClick={handleClick}>
             <span className='header__links-link--span'>Info</span>
-          </a>
+          </button>
+          {/* <button className='header__links-link' onClick={handleClick}>
+            <span className='header__links-link--span'>Colors</span>
+          </button> */}
           <a className='header__links-link' href='https://github.com/timmybytes/rational-design'>
             <span className='header__links-link--span'>Fork Me</span>
             <img className='header__links-link--icon' src={githubLogo} alt='Github logo' />
