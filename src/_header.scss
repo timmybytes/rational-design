@@ -79,7 +79,7 @@
     font-size: 20px;
     margin: 10px auto;
     max-width: 65ch;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 440px) {
       font-size: 16px;
     }
   }
@@ -92,6 +92,9 @@
     font-family: inherit;
     font-weight: 600;
     width: 100%;
+    @media screen and (max-width: 440px) {
+      font-size: 1rem;
+    }
     &:hover {
       background: #8bbbff;
       box-shadow: 4px 4px 0 #444444;
