@@ -99,7 +99,6 @@ function App() {
             />
           </div>
         </form>
-        <hr />
 
         <section className='examples'>
           {currentScale.map(scale => {
