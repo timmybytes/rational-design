@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { ratios } from './ratios';
-import Header from './Header';
+import Header from './components/Header';
 
 function App() {
   const [currentRatio, setCurrentRatio] = useState(ratios[1]);

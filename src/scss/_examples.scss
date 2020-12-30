@@ -1,0 +1,27 @@
+.examples {
+  background-color: $color-blue;
+  box-shadow: 4px 4px 0 $color-dark;
+  border: 2px solid $color-dark;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  justify-content: stretch;
+  align-items: center;
+  gap: 1em;
+  margin-top: 20px;
+  padding: 1em;
+  overflow-x: scroll;
+  &__labels {
+    grid-column: 1;
+    padding-right: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: $color-dark;
+    color: $color-light;
+    padding: 9px;
+    border-radius: 4px;
+  }
+  &__lines {
+    grid-column: 2;
+  }
+}

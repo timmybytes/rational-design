@@ -1,0 +1,95 @@
+.settings {
+  display: flex;
+  border-bottom: 2px solid $color-dark;
+  flex-flow: row wrap;
+  padding: 1rem 0;
+  justify-content: space-between;
+  &__ratio {
+    display: flex;
+    margin: 0.25rem 0;
+    padding: 20px 0;
+    order: 1;
+    &-label {
+      font-weight: 800;
+      margin-right: 10px;
+      padding: 5px;
+      font-size: 1rem;
+    }
+    &-select {
+      border: 2px solid $color-dark;
+      color: $color-darker;
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 4px;
+      &:hover {
+        transition: 0.3s;
+        background: $color-blue;
+        box-shadow: 4px 4px 0 $color-dark;
+      }
+    }
+    select:focus {
+      color: $color-darker;
+      background: $color-blue;
+      outline: none;
+    }
+  }
+  &__base {
+    margin: 0.25rem 0;
+    display: flex;
+    padding: 20px 0;
+    order: 2;
+    &-label {
+      font-weight: 800;
+      margin-right: 10px;
+      padding: 5px;
+      font-size: 1rem;
+    }
+    &-input {
+      border: 2px solid $color-dark;
+      color: $color-darker;
+      border-radius: 4px;
+      font-weight: bold;
+      padding: 5px;
+      &:hover {
+        transition: 0.3s;
+        background: $color-blue;
+        box-shadow: 4px 4px 0 $color-dark;
+      }
+    }
+    input[type='number']:focus {
+      color: $color-darker;
+      background: $color-blue;
+      outline: none;
+    }
+  }
+  &__scale {
+    margin: 0.25rem 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    order: 3;
+    &-label {
+      font-weight: 800;
+      margin-right: 10px;
+      font-size: 1rem;
+      padding: 5px;
+    }
+    &-input {
+      border: 2px solid $color-dark;
+      color: $color-darker;
+      padding: 5px;
+      font-weight: bold;
+      border-radius: 4px;
+      &:hover {
+        transition: 0.3s;
+        background: $color-blue;
+        box-shadow: 4px 4px 0 $color-dark;
+      }
+    }
+    input[type='number']:focus {
+      background: $color-blue;
+      color: $color-darker;
+      outline: none;
+    }
+  }
+}

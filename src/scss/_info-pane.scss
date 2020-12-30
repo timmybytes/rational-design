@@ -1,0 +1,28 @@
+.info {
+  display: none;
+  line-height: 1.7;
+  padding: 5px 0;
+  p {
+    font-size: 20px;
+    margin: 10px auto;
+    max-width: 65ch;
+    @media screen and (max-width: 400px) {
+      font-size: 16px;
+    }
+  }
+  button {
+    padding: 5px;
+    margin: 5px 0;
+    background: none;
+    border: 2px solid $color-darker;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 600;
+    width: 100%;
+    &:hover {
+      background: $color-blue;
+      box-shadow: 4px 4px 0 $color-dark;
+      transition: 0.3s;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import logo from './rational-design-logo-card.svg';
-import githubLogo from './github-logo-icon.svg';
+import logo from '../assets/rational-design-logo-card.svg';
+import githubLogo from '../assets/github-logo-icon.svg';
 
 const Header = () => {
   const [showInfo, setShowInfo] = useState('none');
