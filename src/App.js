@@ -54,6 +54,10 @@ function App() {
               className='settings__ratio-select'
               id='ratios-select'
               onChange={handleRatioChange}>
+              {/* FIXME: */}
+              {/* {Object.keys(ratios).map(ratio => (
+                <option value={ratios[ratio[0]]}>{ ratios[ratio[1]]}</option>
+              ))} */}
               <option value={ratios[1][0]}>{ratios[1][1]}</option>
               <option value={ratios[2][0]}>{ratios[2][1]}</option>
               <option value={ratios[3][0]}>{ratios[3][1]}</option>
