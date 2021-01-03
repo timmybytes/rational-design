@@ -10,6 +10,15 @@ function App() {
   const sizeRef = useRef(currentBaseSize);
   const scaleRef = useRef(currentScale);
 
+  // Creating an arbitrary range of integers:
+  // > const START=2, END=5;
+  // > Array.from({length: END-START}, (x, i) => i+START)
+  // [ 2, 3, 4 ]
+
+  const START = 1,
+    END = 100;
+  const sizes = Array.from({ length: END - START }, (x, i) => i + START);
+
   const handleRatioChange = e => {
     setCurrentRatio(+e.target.value);
     ratioRef.current = +e.target.value;
@@ -69,34 +78,54 @@ function App() {
           </div>
           <div className='settings__base'>
             <label className='settings__base-label' htmlFor='base-size'>
-              Base Size
+              Base Size (px)
             </label>
-            <input
+            <select
+              className='settings__ratio-select'
+              name='base-size'
+              onChange={e => {
+                handleBaseSizeChange(e);
+              }}>
+              {sizes.map(num => (
+                <option val={num}>{num}</option>
+              ))}
+            </select>
+            {/* <input
               className='settings__base-input'
               name='base-size'
               type='number'
-              min='1'
               value={currentBaseSize}
+              min=''
               onChange={e => {
                 handleBaseSizeChange(e);
               }}
-            />
+            /> */}
           </div>
           <div className='settings__scale'>
             <label className='settings__scale-label' htmlFor='scale'>
               Scale
             </label>
-            <input
+            <select
+              className='settings__scale-input'
+              name='scale'
+              onChange={e => {
+                handleScaleChange(e);
+              }}>
+              {sizes.map(num => (
+                <option val={num}>{num}</option>
+              ))}
+            </select>
+            {/* <input
               className='settings__scale-input'
               name='scale'
               type='number'
-              min='1'
+              // min='1'
               max='20'
               onChange={e => {
                 handleScaleChange(e);
               }}
               value={currentScale.length}
-            />
+            /> */}
           </div>
         </form>
 
