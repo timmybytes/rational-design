@@ -1,6 +1,6 @@
 .header {
   align-items: center;
-  border-bottom: 2px solid #444444;
+  border-bottom: 2px solid $color-dark;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,7 +15,10 @@
     height: auto;
     max-width: 300px;
     width: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
+    @media screen and (max-width: 850px) {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -31,8 +34,8 @@
     align-items: center;
     background: none;
     border-radius: 4px;
-    border: 2px solid #444444;
-    color: #252525;
+    border: 2px solid $color-dark;
+    color: $color-darker;
     display: flex;
     flex-direction: row;
     margin-top: 25px;
@@ -41,8 +44,8 @@
     padding: 9px;
     text-decoration: none;
     &:hover {
-      background: #8bbbff;
-      box-shadow: 4px 4px 0 #444444;
+      background: $color-blue;
+      box-shadow: 4px 4px 0 $color-dark;
       transition: 0.3s;
     }
     @media screen and (max-width: 400px) {
