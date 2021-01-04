@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/rational-design/static/css/main.e5e1fd95.chunk.css",
-    "main.js": "/rational-design/static/js/main.322f565a.chunk.js",
-    "main.js.map": "/rational-design/static/js/main.322f565a.chunk.js.map",
+    "main.css": "/rational-design/static/css/main.bb606a80.chunk.css",
+    "main.js": "/rational-design/static/js/main.252c6abf.chunk.js",
+    "main.js.map": "/rational-design/static/js/main.252c6abf.chunk.js.map",
     "runtime-main.js": "/rational-design/static/js/runtime-main.9d28c061.js",
     "runtime-main.js.map": "/rational-design/static/js/runtime-main.9d28c061.js.map",
     "static/js/2.88dec309.chunk.js": "/rational-design/static/js/2.88dec309.chunk.js",
     "static/js/2.88dec309.chunk.js.map": "/rational-design/static/js/2.88dec309.chunk.js.map",
     "index.html": "/rational-design/index.html",
-    "static/css/main.e5e1fd95.chunk.css.map": "/rational-design/static/css/main.e5e1fd95.chunk.css.map",
+    "static/css/main.bb606a80.chunk.css.map": "/rational-design/static/css/main.bb606a80.chunk.css.map",
     "static/js/2.88dec309.chunk.js.LICENSE.txt": "/rational-design/static/js/2.88dec309.chunk.js.LICENSE.txt",
     "static/media/github-logo-icon.22861d02.svg": "/rational-design/static/media/github-logo-icon.22861d02.svg",
     "static/media/rational-design-logo-card.2a37e9dc.svg": "/rational-design/static/media/rational-design-logo-card.2a37e9dc.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.9d28c061.js",
     "static/js/2.88dec309.chunk.js",
-    "static/css/main.e5e1fd95.chunk.css",
-    "static/js/main.322f565a.chunk.js"
+    "static/css/main.bb606a80.chunk.css",
+    "static/js/main.252c6abf.chunk.js"
   ]
 }
