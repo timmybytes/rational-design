@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rational-design/static/css/main.e5e1fd95.chunk.css",
-    "main.js": "/rational-design/static/js/main.c2ee5029.chunk.js",
-    "main.js.map": "/rational-design/static/js/main.c2ee5029.chunk.js.map",
+    "main.js": "/rational-design/static/js/main.322f565a.chunk.js",
+    "main.js.map": "/rational-design/static/js/main.322f565a.chunk.js.map",
     "runtime-main.js": "/rational-design/static/js/runtime-main.9d28c061.js",
     "runtime-main.js.map": "/rational-design/static/js/runtime-main.9d28c061.js.map",
     "static/js/2.88dec309.chunk.js": "/rational-design/static/js/2.88dec309.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9d28c061.js",
     "static/js/2.88dec309.chunk.js",
     "static/css/main.e5e1fd95.chunk.css",
-    "static/js/main.c2ee5029.chunk.js"
+    "static/js/main.322f565a.chunk.js"
   ]
 }
