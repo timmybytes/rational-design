@@ -7,7 +7,7 @@ export const ratios = {
   // 3. Trion 1:1.154
   3: [1.154, 'Trion 1:1.154'],
   // 4. Quadriagon 1:1.207
-  4: [1.207, 'Quadriagon 1:1'],
+  4: [1.207, 'Quadriagon 1:1.207'],
   // 5. Biauron 1:1.236
   5: [1.236, 'Biauron 1:1.236'],
   // 6. Penton 1:1.272
