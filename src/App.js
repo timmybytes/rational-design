@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { ratios } from './ratios';
 import Header from './components/Header';
+import InfoPane from './components/InfoPane';
 
 function App() {
   const [currentRatio, setCurrentRatio] = useState(ratios[1]);
@@ -9,11 +10,6 @@ function App() {
   const ratioRef = useRef(currentRatio);
   const sizeRef = useRef(currentBaseSize);
   const scaleRef = useRef(currentScale);
-
-  // Creating an arbitrary range of integers:
-  // > const START=2, END=5;
-  // > Array.from({length: END-START}, (x, i) => i+START)
-  // [ 2, 3, 4 ]
 
   const START = 1,
     END = 100;
@@ -45,7 +41,11 @@ function App() {
     <>
       <Header />
       <main>
-        <form className='settings'>
+        <form
+          className='settings'
+          onSubmit={e => {
+            e.preventDefault();
+          }}>
           <div className='settings__ratio'>
             <label className='settings__ratio-label' htmlFor='ratios-select'>
               Ratio
@@ -132,6 +132,7 @@ function App() {
             /> */}
           </div>
         </form>
+        <InfoPane />
 
         <section className='examples'>
           {currentScale.map(scale => {

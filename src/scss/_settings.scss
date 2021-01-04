@@ -1,13 +1,12 @@
 .settings {
   display: flex;
-  border-bottom: 2px solid $color-dark;
   flex-flow: row wrap;
-  padding: 1rem 0;
+  padding: 0.25rem 0;
   justify-content: space-between;
   &__ratio {
     display: flex;
     margin: 0.25rem 0;
-    padding: 20px 0;
+    padding-top: 20px;
     order: 1;
     &-label {
       font-weight: 800;
@@ -36,7 +35,7 @@
   &__base {
     margin: 0.25rem 0;
     display: flex;
-    padding: 20px 0;
+    padding-top: 20px;
     order: 2;
     &-label {
       font-weight: 800;
@@ -66,7 +65,7 @@
     margin: 0.25rem 0;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    padding-top: 20px;
     order: 3;
     &-label {
       font-weight: 800;
