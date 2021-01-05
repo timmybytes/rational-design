@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import SettingsPane from './components/SettingsPane';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <SettingsPane />
         {/* TODO: <Examples /> with Context state */}
       </main>
+      <Footer />
     </>
   );
 }

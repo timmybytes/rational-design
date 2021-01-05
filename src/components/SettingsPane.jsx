@@ -4,9 +4,13 @@ import InfoPane from './InfoPane';
 import Examples from './Examples';
 
 const SettingsPane = () => {
-  const [currentRatio, setCurrentRatio] = useState(ratios[1][0]);
+  const [currentRatio, setCurrentRatio] = useState(ratios[3][0]);
   const [currentBaseSize, setCurrentBaseSize] = useState(16);
-  const [currentScale, setCurrentScale] = useState([currentBaseSize]);
+  const [currentScale, setCurrentScale] = useState([
+    currentBaseSize,
+    currentBaseSize,
+    currentBaseSize,
+  ]);
   const ratioRef = useRef(currentRatio);
   const sizeRef = useRef(currentBaseSize);
   const scaleRef = useRef(currentScale);
@@ -14,6 +18,13 @@ const SettingsPane = () => {
   const START = 1,
     END = 100;
   const sizes = Array.from({ length: END - START }, (x, i) => i + START);
+
+  let finalSettings = () => {
+    console.log(ratioRef.current);
+    console.log(sizeRef.current);
+    console.log(scaleRef.current);
+    <p>words</p>;
+  };
 
   const handleRatioChange = e => {
     setCurrentRatio(+e.target.value);
@@ -88,6 +99,7 @@ const SettingsPane = () => {
           <select
             className='settings__scale-input'
             name='scale'
+            defaultValue={currentScale.length}
             onChange={e => {
               handleScaleChange(e);
             }}>
@@ -96,6 +108,11 @@ const SettingsPane = () => {
             ))}
           </select>
         </div>
+        {/* TODO: Add copy function */}
+        {/* <div>
+          <button onClick={finalSettings}>Click</button>
+          <pre>// Rational sizes --size-1: ratioRef</pre>
+        </div> */}
       </form>
       <InfoPane />
       <Examples currentScale={currentScale} />

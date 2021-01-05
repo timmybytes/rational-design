@@ -1,0 +1,29 @@
+footer {
+  background: $color-light;
+  bottom: 0;
+  color: $color-dark;
+  font-size: 14px;
+  left: 0;
+  margin: 0 auto;
+  padding: 10px 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  @media screen and (max-width: 850px) {
+    font-size: 10px;
+  }
+  a {
+    color: $color-dark;
+    border-bottom: 2px solid $color-blue;
+    text-decoration: none;
+    span:hover {
+      color: $color-dark;
+      border-radius: 4px;
+      border: 2px solid $color-dark;
+      background: $color-blue;
+      box-shadow: 2px 2px 0 $color-dark;
+      padding: 5px;
+      transition: 0.3s;
+    }
+  }
+}
