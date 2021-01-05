@@ -6,7 +6,7 @@ const Examples = props => (
       return (
         <>
           <span className='examples__labels'>{scale}px</span>
-          <p style={{ fontSize: `${scale}px` }} className='examples__lines'>
+          <p style={{ fontSize: `${+scale}px` }} className='examples__lines'>
             Before we knew it, we were jumping over quick foxes and lazy cows.
           </p>
         </>
