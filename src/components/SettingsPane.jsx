@@ -4,7 +4,7 @@ import InfoPane from './InfoPane';
 import Examples from './Examples';
 
 const SettingsPane = () => {
-  const [currentRatio, setCurrentRatio] = useState(ratios[1]);
+  const [currentRatio, setCurrentRatio] = useState(ratios[1][0]);
   const [currentBaseSize, setCurrentBaseSize] = useState(16);
   const [currentScale, setCurrentScale] = useState([currentBaseSize]);
   const ratioRef = useRef(currentRatio);
@@ -86,6 +86,7 @@ const SettingsPane = () => {
           <select
             className='settings__ratio-select'
             name='base-size'
+            defaultValue={currentBaseSize}
             onChange={e => {
               handleBaseSizeChange(e);
             }}>
