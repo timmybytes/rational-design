@@ -31,6 +31,11 @@
       background: $color-blue;
       outline: none;
     }
+    select option:disabled {
+      color: $color-blue;
+      background-color: $color-darker;
+      text-transform: uppercase;
+    }
   }
   &__base {
     margin: 0.25rem 0;

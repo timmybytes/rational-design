@@ -19,7 +19,6 @@ const SettingsPane = () => {
     setCurrentRatio(+e.target.value);
     ratioRef.current = +e.target.value;
     handleScaleChange();
-    console.log();
   };
 
   const handleBaseSizeChange = e => {
@@ -53,10 +52,11 @@ const SettingsPane = () => {
             className='settings__ratio-select'
             id='ratios-select'
             onChange={handleRatioChange}>
+            <option disabled>Orthagon Ratios</option>
             {Object.keys(ratios).map(ratio =>
               ratios[ratio][1] === 'Doppelquadrant (Halves) 1:2' ? (
                 <>
-                  <option disabled>──────────</option>
+                  <option disabled>Musical Scale Ratios</option>
                   <option value={+ratios[ratio][0]}>{ratios[ratio][1]}</option>
                 </>
               ) : (
