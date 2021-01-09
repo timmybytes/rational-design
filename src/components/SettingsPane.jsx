@@ -4,6 +4,7 @@ import InfoPane from './InfoPane';
 import Examples from './Examples';
 
 const SettingsPane = () => {
+
   const [currentRatio, setCurrentRatio] = useState(ratios[3][0]);
   const [currentBaseSize, setCurrentBaseSize] = useState(16);
   const [currentScale, setCurrentScale] = useState([
