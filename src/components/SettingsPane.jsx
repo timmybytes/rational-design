@@ -20,12 +20,12 @@ const SettingsPane = () => {
     END = 100;
   const sizes = Array.from({ length: END - START }, (x, i) => i + START);
 
-  let finalSettings = () => {
-    console.log(ratioRef.current);
-    console.log(sizeRef.current);
-    console.log(scaleRef.current);
-    <p>words</p>;
-  };
+  // let finalSettings = () => {
+  //   console.log(ratioRef.current);
+  //   console.log(sizeRef.current);
+  //   console.log(scaleRef.current);
+  //   <p>words</p>;
+  // };
 
   const handleRatioChange = e => {
     setCurrentRatio(+e.target.value);
