@@ -20,3 +20,17 @@
     }
   }
 }
+
+.color-container {
+  display: flex;
+  justify-content: stretch;
+  padding: 15px 0;
+}
+
+.circle-picker {
+  span > div > span > div {
+    border: 2px solid $color-dark;
+    transition: none;
+  }
+}
+

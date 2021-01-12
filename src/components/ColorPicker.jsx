@@ -30,7 +30,7 @@ const ColorPicker = () => {
             onClick={handleClickOne}
             style={{ backgroundColor: swatchColorOne }}></button>
         </div>
-        <input readOnly ref={colorElement} className='card__color-code' value={swatchColorOne} />
+        <input ref={colorElement} className='card__color-code' value={swatchColorOne} />
         <button onClick={copyToClipboard}>{!isCopied ? 'Copy To Clipboard' : 'Copied'}</button>
       </div>
     </div>
