@@ -17,7 +17,6 @@ const InfoPane = () => {
             ?
           </span>
         </button>
-        {/* <br /> */}
         <article className='info-pane__panel' style={{ display: showInfo }}>
           <p className='info-pane__panel-text'>
             Choose a <strong>ratio</strong>, <strong>base font-size</strong> (pixels), and{' '}
