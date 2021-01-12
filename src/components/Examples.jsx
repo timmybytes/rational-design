@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Examples = props => (
-  <section className='examples'>
+  <section className='examples' style={{background: props.bgColor, color: props.textColor}}>
     {props.currentScale.map(scale => {
       return (
         <>

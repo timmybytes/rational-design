@@ -2,9 +2,9 @@ import React, { useState, useRef } from 'react';
 import { ratios } from '../ratios';
 import InfoPane from './InfoPane';
 import Examples from './Examples';
+import { CirclePicker } from 'react-color';
 
 const SettingsPane = () => {
-
   const [currentRatio, setCurrentRatio] = useState(ratios[3][0]);
   const [currentBaseSize, setCurrentBaseSize] = useState(16);
   const [currentScale, setCurrentScale] = useState([
@@ -15,6 +15,8 @@ const SettingsPane = () => {
   const ratioRef = useRef(currentRatio);
   const sizeRef = useRef(currentBaseSize);
   const scaleRef = useRef(currentScale);
+  const [bgColor, setBGColor] = useState('')
+  const [textColor, setTextColor] = useState('')
 
   const START = 1,
     END = 100;
@@ -49,6 +51,7 @@ const SettingsPane = () => {
     scaleRef.current = arr;
   };
 
+
   return (
     <>
       <form
@@ -57,6 +60,7 @@ const SettingsPane = () => {
           e.preventDefault();
         }}>
         <div className='settings__ratio'>
+
           <label className='settings__ratio-label' htmlFor='ratios-select'>
             Ratio
           </label>
@@ -115,8 +119,20 @@ const SettingsPane = () => {
           <pre>// Rational sizes --size-1: ratioRef</pre>
         </div> */}
       </form>
+      <div className="color-container" style={{  }}>
+        <label className='settings__scale-label' htmlFor='scale'>
+            BG Color
+          </label>
+        <CirclePicker onChange={(e)=> {setBGColor(e.hex)}} width={"800"} colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#8bbbff", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#000000", "#ffffff"]} />
+      </div>
+      <div className="color-container" style={{  }}>
+        <label className='settings__scale-label' htmlFor='scale'>
+            Text Color
+          </label>
+        <CirclePicker onChange={(e) => { setTextColor(e.hex) }} width={"800"} colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#8bbbff", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#000000", "#ffffff"]} />
+      </div>
       <InfoPane />
-      <Examples currentScale={currentScale} />
+      <Examples bgColor={bgColor} textColor={textColor} currentScale={currentScale} />
     </>
   );
 };
