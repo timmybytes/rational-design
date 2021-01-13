@@ -1,26 +1,3 @@
-.card {
-  display: flex;
-  flex-flow: row nowrap;
-  .card__outer-container {
-    background-color: palevioletred;
-    .card__inner-container {
-      background-color: palegoldenrod;
-      .card__color-swatch {
-        border: 2px solid $color-dark;
-        box-shadow: 4px 4px 0 $color-dark;
-        border-radius: 4px;
-        background-color: #000000;
-        height: 90px;
-        width: 90px;
-      }
-    }
-    .card__color-code {
-      border: 2px solid $color-dark;
-      box-shadow: 4px 4px $color-dark;
-    }
-  }
-}
-
 .color-container {
   display: flex;
   justify-content: stretch;
@@ -29,6 +6,7 @@
 
 .circle-picker {
   span > div > span > div {
+    box-shadow: none;
     border: 2px solid $color-dark;
     transition: none;
   }

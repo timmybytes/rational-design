@@ -15,19 +15,32 @@ const SettingsPane = () => {
   const ratioRef = useRef(currentRatio);
   const sizeRef = useRef(currentBaseSize);
   const scaleRef = useRef(currentScale);
-  const [bgColor, setBGColor] = useState('')
-  const [textColor, setTextColor] = useState('')
+  const [bgColor, setBGColor] = useState('');
+  const [textColor, setTextColor] = useState('');
+  const baseColors = [
+    '#f44336',
+    '#e91e63',
+    '#9c27b0',
+    '#673ab7',
+    '#3f51b5',
+    '#2196f3',
+    '#03a9f4',
+    '#8bbbff',
+    '#009688',
+    '#4caf50',
+    '#8bc34a',
+    '#cddc39',
+    '#ffeb3b',
+    '#ffc107',
+    '#ff9800',
+    '#ff5722',
+    '#444444',
+    'fafafa',
+  ];
 
   const START = 1,
     END = 100;
   const sizes = Array.from({ length: END - START }, (x, i) => i + START);
-
-  // let finalSettings = () => {
-  //   console.log(ratioRef.current);
-  //   console.log(sizeRef.current);
-  //   console.log(scaleRef.current);
-  //   <p>words</p>;
-  // };
 
   const handleRatioChange = e => {
     setCurrentRatio(+e.target.value);
@@ -51,16 +64,10 @@ const SettingsPane = () => {
     scaleRef.current = arr;
   };
 
-
   return (
     <>
-      <form
-        className='settings'
-        onSubmit={e => {
-          e.preventDefault();
-        }}>
-        <div className='settings__ratio'>
-
+      <section className='settings'>
+        <article className='settings__ratio'>
           <label className='settings__ratio-label' htmlFor='ratios-select'>
             Ratio
           </label>
@@ -80,8 +87,8 @@ const SettingsPane = () => {
               )
             )}
           </select>
-        </div>
-        <div className='settings__base'>
+        </article>
+        <article className='settings__base'>
           <label className='settings__base-label' htmlFor='base-size'>
             Base Size (px)
           </label>
@@ -96,8 +103,8 @@ const SettingsPane = () => {
               <option val={num}>{num}</option>
             ))}
           </select>
-        </div>
-        <div className='settings__scale'>
+        </article>
+        <article className='settings__scale'>
           <label className='settings__scale-label' htmlFor='scale'>
             Scale
           </label>
@@ -112,25 +119,34 @@ const SettingsPane = () => {
               <option val={currentScale.length}>{num}</option>
             ))}
           </select>
-        </div>
-        {/* TODO: Add copy function */}
-        {/* <div>
-          <button onClick={finalSettings}>Click</button>
-          <pre>// Rational sizes --size-1: ratioRef</pre>
-        </div> */}
-      </form>
-      <div className="color-container" style={{  }}>
-        <label className='settings__scale-label' htmlFor='scale'>
+        </article>
+      </section>
+      <section>
+        <article className='color-container'>
+          <label className='settings__scale-label' htmlFor='bg-color'>
             BG Color
           </label>
-        <CirclePicker onChange={(e)=> {setBGColor(e.hex)}} width={"800"} colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#8bbbff", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#000000", "#ffffff"]} />
-      </div>
-      <div className="color-container" style={{  }}>
-        <label className='settings__scale-label' htmlFor='scale'>
+          <CirclePicker
+            colors={baseColors}
+            onChange={e => {
+              setBGColor(e.hex);
+            }}
+            width={'800'}
+          />
+        </article>
+        <article className='color-container'>
+          <label className='settings__scale-label' htmlFor='text-color'>
             Text Color
           </label>
-        <CirclePicker onChange={(e) => { setTextColor(e.hex) }} width={"800"} colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#8bbbff", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#000000", "#ffffff"]} />
-      </div>
+          <CirclePicker
+            colors={baseColors}
+            onChange={e => {
+              setTextColor(e.hex);
+            }}
+            width={'800'}
+          />
+        </article>
+      </section>
       <InfoPane />
       <Examples bgColor={bgColor} textColor={textColor} currentScale={currentScale} />
     </>
