@@ -52,7 +52,7 @@ The **scale** determines how many ratio increments the app should output. The de
 
 #### Chose colors
 
-**NEW!** A currently *work-in-progress* color chooser is now incorporated into Rational Design's settings. You can currently choose background/text colors for rendered scales, with the upcoming ability to copy and export colors along with your created scale.
+**NEW!** A currently *work-in-progress* color chooser is now incorporated into Rational Design's settings via [react-color](https://casesandberg.github.io/react-color/#examples). You can currently choose background/text colors for rendered scales, with the upcoming ability to copy and export colors along with your created scale.
 
 <img src='./src/assets/readme-colors.png' alt='Rational Design - color palette display'>
 
