@@ -50,6 +50,12 @@ Choose a base font size (in pixels). The rest of your scale will be calculated s
 The **scale** determines how many ratio increments the app should output. The default is 3, but you can go up to 100.
 <img src='./src/assets/readme-5.png' alt='Rational Design - Info button display'>
 
+#### Chose colors
+
+**NEW!** A currently *work-in-progress* color chooser is now incorporated into Rational Design's settings. You can currently choose background/text colors for rendered scales, with the upcoming ability to copy and export colors along with your created scale.
+
+<img src='./src/assets/readme-colors.png' alt='Rational Design - color palette display'>
+
 #### Use your type scale
 
 You can use the resulting increments as a system for consistency in your projects. Instead of just eyeballing bigger and smaller sizes, choose from your scale and your designs will be more pleasing to the eye (and easier to manage).
