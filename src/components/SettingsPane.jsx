@@ -76,14 +76,18 @@ const SettingsPane = () => {
             id='ratios-select'
             onChange={handleRatioChange}>
             <option disabled>Orthagon Ratios</option>
-            {Object.keys(ratios).map(ratio =>
+            {Object.keys(ratios).map((ratio, idx) =>
               ratios[ratio][1] === 'Doppelquadrant (Halves) 1:2' ? (
                 <>
                   <option disabled>Musical Scale Ratios</option>
-                  <option value={+ratios[ratio][0]}>{ratios[ratio][1]}</option>
+                  <option key={idx} value={+ratios[ratio][0]}>
+                    {ratios[ratio][1]}
+                  </option>
                 </>
               ) : (
-                <option value={+ratios[ratio][0]}>{ratios[ratio][1]}</option>
+                <option key={idx} value={+ratios[ratio][0]}>
+                  {ratios[ratio][1]}
+                </option>
               )
             )}
           </select>
@@ -99,8 +103,10 @@ const SettingsPane = () => {
             onChange={e => {
               handleBaseSizeChange(e);
             }}>
-            {sizes.map(num => (
-              <option val={num}>{num}</option>
+            {sizes.map((num, idx) => (
+              <option key={idx} val={num}>
+                {num}
+              </option>
             ))}
           </select>
         </article>
@@ -115,8 +121,10 @@ const SettingsPane = () => {
             onChange={e => {
               handleScaleChange(e);
             }}>
-            {sizes.map(num => (
-              <option val={currentScale.length}>{num}</option>
+            {sizes.map((num, idx) => (
+              <option key={idx} val={currentScale.length}>
+                {num}
+              </option>
             ))}
           </select>
         </article>
