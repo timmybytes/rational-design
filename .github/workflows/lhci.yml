@@ -1,0 +1,17 @@
+name: Lighthouse CI
+on:
+  push:
+    branches: [ deploy ]
+  workflow_dispatch:
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: |
+            https://timmybytes.github.io/rational-design/
+          uploadArtifacts: true
+          temporaryPublicStorage: true
