@@ -2,8 +2,14 @@
 <img src='./src/assets/rational-design-logo-card.svg' alt='Rational Design Logo'>
 </h1>
 
+<!-- Badges -->
 <div align="center">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/timmybytes/rational-design" />
+  <img alt='Lighthouse accessibility score' src='./test_results/lighthouse_accessibility.svg' />
+  <img alt='Lighthouse best practices score' src='./test_results/lighthouse_best-practices.svg' />
+  <img alt='Lighthouse performance score' src='./test_results/lighthouse_performance.svg' />
+  <img alt='Lighthouse SEO score' src='./test_results/lighthouse_seo.svg' />
+  <img alt='Lighthouse PWA score' src='./test_results/lighthouse_pwa.svg' />
 </div>
 
 <div align="center">
