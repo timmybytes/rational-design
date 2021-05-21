@@ -67,7 +67,7 @@ const SettingsPane = () => {
   return (
     <>
       <section className='settings'>
-        <article className='settings__ratio'>
+        <div className='settings__ratio'>
           <label className='settings__ratio-label' htmlFor='ratios-select'>
             Ratio
           </label>
@@ -91,8 +91,8 @@ const SettingsPane = () => {
               )
             )}
           </select>
-        </article>
-        <article className='settings__base'>
+        </div>
+        <div className='settings__base'>
           <label className='settings__base-label' htmlFor='base-size'>
             Base Size (px)
           </label>
@@ -109,8 +109,8 @@ const SettingsPane = () => {
               </option>
             ))}
           </select>
-        </article>
-        <article className='settings__scale'>
+        </div>
+        <div className='settings__scale'>
           <label className='settings__scale-label' htmlFor='scale'>
             Scale
           </label>
@@ -127,33 +127,33 @@ const SettingsPane = () => {
               </option>
             ))}
           </select>
-        </article>
-      </section>
-      <section>
-        <article className='color-container'>
-          <label className='settings__scale-label' htmlFor='bg-color'>
-            BG Color
-          </label>
-          <CirclePicker
-            colors={baseColors}
-            onChange={e => {
-              setBGColor(e.hex);
-            }}
-            width={'800'}
-          />
-        </article>
-        <article className='color-container'>
-          <label className='settings__scale-label' htmlFor='text-color'>
-            Text Color
-          </label>
-          <CirclePicker
-            colors={baseColors}
-            onChange={e => {
-              setTextColor(e.hex);
-            }}
-            width={'800'}
-          />
-        </article>
+        </div>
+        <div className='settings__colors'>
+          <div className='color-container'>
+            <label className='settings__scale-label' htmlFor='bg-color'>
+              BG Color
+            </label>
+            <CirclePicker
+              colors={baseColors}
+              onChange={e => {
+                setBGColor(e.hex);
+              }}
+              width={'800'}
+            />
+          </div>
+          <div className='color-container'>
+            <label className='settings__scale-label' htmlFor='text-color'>
+              Text Color
+            </label>
+            <CirclePicker
+              colors={baseColors}
+              onChange={e => {
+                setTextColor(e.hex);
+              }}
+              width={'800'}
+            />
+          </div>
+        </div>
       </section>
       <InfoPane />
       <Examples
