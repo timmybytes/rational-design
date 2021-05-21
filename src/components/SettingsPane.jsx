@@ -148,7 +148,11 @@ const SettingsPane = () => {
         </article>
       </section>
       <InfoPane />
-      <Examples bgColor={bgColor} textColor={textColor} currentScale={currentScale} />
+      <Examples
+        bgColor={bgColor}
+        textColor={textColor}
+        currentScale={currentScale}
+      />
     </>
   );
 };
