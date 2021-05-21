@@ -6,17 +6,20 @@ import { CirclePicker } from 'react-color';
 
 const SettingsPane = () => {
   const [currentRatio, setCurrentRatio] = useState(ratios[3][0]);
-  const [currentBaseSize, setCurrentBaseSize] = useState(16);
+  const [currentBaseSize, setCurrentBaseSize] = useState(12);
   const [currentScale, setCurrentScale] = useState([
     currentBaseSize,
     currentBaseSize,
     currentBaseSize,
   ]);
+  const [bgColor, setBGColor] = useState('');
+  const [textColor, setTextColor] = useState('');
+
   const ratioRef = useRef(currentRatio);
   const sizeRef = useRef(currentBaseSize);
   const scaleRef = useRef(currentScale);
-  const [bgColor, setBGColor] = useState('');
-  const [textColor, setTextColor] = useState('');
+
+  // react-color default color overrides
   const baseColors = [
     '#f44336',
     '#e91e63',
@@ -38,6 +41,11 @@ const SettingsPane = () => {
     'fafafa',
   ];
 
+  console.log({ currentRatio });
+  console.log({ currentBaseSize });
+  console.log({ currentScale });
+
+  // Generate array of 1-100 integers
   const START = 1,
     END = 100;
   const sizes = Array.from({ length: END - START }, (x, i) => i + START);
