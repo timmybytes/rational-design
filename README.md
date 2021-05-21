@@ -17,17 +17,15 @@
 
 Rational Design is a tool for generating type-scales for greater consistency in design systems or web design projects. It’s built with React Hooks, SCSS, Webpack, and npm scripts, and is fully responsive.
 
-_Coming Soon: Ability to copy type scale as CSS/SCSS, color palette chooser, font chooser._
-
 ## About
 
-Rational Design uses a combination of state and useRef Hooks to dynamically render type scales according to user input. This originally created some delays in state updating properly due to [stale closures](https://css-tricks.com/dealing-with-stale-props-and-states-in-reacts-functional-components/), but useRef solves this issue by returning the same `ref` value in memory during each rerender.
+Rational Design uses a combination of `state` and `useRef` Hooks to dynamically render type scales according to user input. This originally created some delays in state updating properly due to [stale closures](https://css-tricks.com/dealing-with-stale-props-and-states-in-reacts-functional-components/), but the useRef Hook solves this issue by returning the same `ref` value in memory during each rerender.
 
 ## Usage
 
 ### Web App
 
-Use the [live web app](https://timmybytes.github.io/rational-design/) to create a ratio-based type scale. You can click the **info button** for more details. All related options are updated immediately with React `state` and `useRef` Hooks, so you can play around with the settings to generate different scales.
+Use the [live web app](https://timmybytes.github.io/rational-design/) to create a ratio-based type scale. You can click the **info button** in the app for more details. All related options are updated immediately with React `state` and `useRef` Hooks, so you can play around with the settings to generate different scales.
 
 <img src='./src/assets/readme-1.png' alt='Rational Design - Info button display'>
 
@@ -52,7 +50,7 @@ The **scale** determines how many ratio increments the app should output. The de
 
 #### Chose colors
 
-**NEW!** A currently *work-in-progress* color chooser is now incorporated into Rational Design's settings via [react-color](https://casesandberg.github.io/react-color/#examples). You can currently choose background/text colors for rendered scales, with the upcoming ability to copy and export colors along with your created scale.
+A color chooser is incorporated into Rational Design's settings via [react-color](https://casesandberg.github.io/react-color/#examples). Use the color pairings to see your type scale in different color contrasts.
 
 <img src='./src/assets/readme-colors.png' alt='Rational Design - color palette display'>
 
@@ -61,18 +59,6 @@ The **scale** determines how many ratio increments the app should output. The de
 You can use the resulting increments as a system for consistency in your projects. Instead of just eyeballing bigger and smaller sizes, choose from your scale and your designs will be more pleasing to the eye (and easier to manage).
 
 <img src='./src/assets/readme-6.png' alt='Rational Design - Info button display'>
-
-#### Copy your scale as CSS/SCSS
-
-(Coming Soon)
-
-#### Choose a color palette
-
-(Coming Soon)
-
-#### Choose fonts
-
-(Coming Soon)
 
 ---
 
