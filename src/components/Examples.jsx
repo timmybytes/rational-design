@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Examples = props => (
+const Examples = ({ bgColor, textColor, currentScale }) => (
   <section
     className='examples'
-    style={{ background: props.bgColor, color: props.textColor }}>
-    {props.currentScale.map((scale, idx) => {
+    style={{ background: bgColor, color: textColor }}>
+    {currentScale.map((scale, idx) => {
       return (
         <React.Fragment key={idx}>
           <span className='examples__labels'>{scale}px</span>
