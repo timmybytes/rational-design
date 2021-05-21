@@ -1,5 +1,4 @@
 .info-pane {
-  // background: $color-light;
   border-bottom: 2px solid $color-dark;
   display: flex;
   flex-direction: column;
@@ -13,7 +12,6 @@
   box-shadow: 2px 2px 0 $color-dark;
 }
 .info-pane__button {
-  // background: $color-light;
   margin-left: auto;
   align-self: center;
   padding: 0 7px;
