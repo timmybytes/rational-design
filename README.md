@@ -21,6 +21,8 @@ Rational Design is a tool for generating type-scales for greater consistency in 
 
 Rational Design uses a combination of `state` and `useRef` Hooks to dynamically render type scales according to user input. This originally created some delays in state updating properly due to [stale closures](https://css-tricks.com/dealing-with-stale-props-and-states-in-reacts-functional-components/), but the useRef Hook solves this issue by returning the same `ref` value in memory during each rerender.
 
+[Trello Board for Rational Design App](https://trello.com/b/dhSzNpvw)
+
 ## Usage
 
 ### Web App
