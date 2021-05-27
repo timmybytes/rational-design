@@ -1,8 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
+import { CirclePicker } from 'react-color';
 import { ratios } from '../ratios';
+import SettingsContext from '../contexts/SettingsContext';
+
 import InfoPane from './InfoPane';
 import Examples from './Examples';
-import { CirclePicker } from 'react-color';
 
 const SettingsPane = () => {
   const [currentRatio, setCurrentRatio] = useState(ratios[3][0]);
@@ -41,25 +43,37 @@ const SettingsPane = () => {
     'fafafa',
   ];
 
-  console.log({ currentRatio });
-  console.log({ currentBaseSize });
-  console.log({ currentScale });
+  const settings = useContext(SettingsContext);
+  const [currentSettings, setSettings] = useState(settings);
+  console.log({ currentSettings });
 
   // Generate array of 1-100 integers
   const START = 1,
     END = 100;
   const sizes = Array.from({ length: END - START }, (x, i) => i + START);
 
+  const updateSettings = () => {
+    setSettings({
+      ratio: currentRatio,
+      baseSize: currentBaseSize,
+      scale: currentScale,
+      bgColor: bgColor,
+      color: textColor,
+    });
+  };
+
   const handleRatioChange = e => {
     setCurrentRatio(+e.target.value);
     ratioRef.current = +e.target.value;
     handleScaleChange();
+    updateSettings();
   };
 
   const handleBaseSizeChange = e => {
     sizeRef.current = +e.target.value;
     setCurrentBaseSize(+e.target.value);
     handleScaleChange();
+    updateSettings();
   };
 
   const handleScaleChange = e => {
@@ -70,6 +84,7 @@ const SettingsPane = () => {
     }
     setCurrentScale(arr);
     scaleRef.current = arr;
+    updateSettings();
   };
 
   return (
@@ -88,12 +103,20 @@ const SettingsPane = () => {
               ratios[ratio][1] === 'Doppelquadrant (Halves) 1:2' ? (
                 <>
                   <option disabled>Musical Scale Ratios</option>
-                  <option key={idx} value={+ratios[ratio][0]}>
+                  <option
+                    key={idx}
+                    value={+ratios[ratio][0]}
+                    // conditional selection based on currentRatio
+                  >
                     {ratios[ratio][1]}
                   </option>
                 </>
               ) : (
-                <option key={idx} value={+ratios[ratio][0]}>
+                <option
+                  key={idx}
+                  value={+ratios[ratio][0]}
+                  // conditional selection based on currentRatio
+                >
                   {ratios[ratio][1]}
                 </option>
               )
@@ -145,6 +168,7 @@ const SettingsPane = () => {
               colors={baseColors}
               onChange={e => {
                 setBGColor(e.hex);
+                updateSettings();
               }}
               width={'800'}
             />
@@ -157,6 +181,7 @@ const SettingsPane = () => {
               colors={baseColors}
               onChange={e => {
                 setTextColor(e.hex);
+                updateSettings();
               }}
               width={'800'}
             />
