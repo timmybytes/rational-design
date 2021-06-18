@@ -9,11 +9,7 @@ import Examples from './Examples';
 const SettingsPane = () => {
   const [currentRatio, setCurrentRatio] = useState(ratios[3][0]);
   const [currentBaseSize, setCurrentBaseSize] = useState(12);
-  const [currentScale, setCurrentScale] = useState([
-    currentBaseSize,
-    currentBaseSize,
-    currentBaseSize,
-  ]);
+  const [currentScale, setCurrentScale] = useState([currentBaseSize]);
   const [bgColor, setBGColor] = useState('');
   const [textColor, setTextColor] = useState('');
 
@@ -63,7 +59,8 @@ const SettingsPane = () => {
   };
 
   const handleRatioChange = e => {
-    setCurrentRatio(+e.target.value);
+    // '+' unary operator attempts to covert its operand into a number if it isn't already
+    setCurrentRatio(() => +e.target.value);
     ratioRef.current = +e.target.value;
     handleScaleChange();
     updateSettings();
@@ -71,7 +68,7 @@ const SettingsPane = () => {
 
   const handleBaseSizeChange = e => {
     sizeRef.current = +e.target.value;
-    setCurrentBaseSize(+e.target.value);
+    setCurrentBaseSize(() => +e.target.value);
     handleScaleChange();
     updateSettings();
   };
@@ -82,7 +79,7 @@ const SettingsPane = () => {
     for (let i = 1; i < increaser; i++) {
       arr.push(Math.floor(arr[i - 1] * ratioRef.current * 100) / 100);
     }
-    setCurrentScale(arr);
+    setCurrentScale(() => arr);
     scaleRef.current = arr;
     updateSettings();
   };
