@@ -18,25 +18,19 @@ function App() {
   });
   const [colors, setColors] = useState({ foreground: '', background: '' });
 
-  const handleTypeScaleChange = data => {
-    setSettings(data);
-  };
-
-  const handleColorChange = data => {
-    console.log(colors);
-    setColors(data);
-  };
-
   return (
     <>
       <Header />
       <Main>
         <Settings>
           <TypeScaleSettings
-            updateTypeScale={handleTypeScaleChange}
+            updateTypeScale={data => setSettings(data)}
             settings={settings}
           />
-          <ColorSettings updateColors={handleColorChange} colors={colors} />
+          <ColorSettings
+            updateColors={data => setColors(data)}
+            colors={colors}
+          />
         </Settings>
         <Info />
         <Examples colors={colors} settings={settings} />

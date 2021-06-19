@@ -25,7 +25,6 @@ const ColorSettings = ({
     '#444444',
     'fafafa',
   ];
-
   return (
     <div className='settings__colors'>
       <div className='color-container'>

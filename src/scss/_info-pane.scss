@@ -10,12 +10,13 @@
 .clicked {
   background-color: $color-blue;
   box-shadow: 2px 2px 0 $color-dark;
+  transform: rotate(0.08turn) scale(1.2);
 }
 .info-pane__button {
   background: $color-blue;
   margin-left: auto;
   align-self: center;
-  padding: 0 7px;
+  padding: 0 6px;
   border: 2px solid $color-dark;
   border-radius: 50%;
   transition: 0.3s;

@@ -44,7 +44,7 @@
     &:hover {
       background: $color-blue;
       box-shadow: 4px 4px 0 $color-dark;
-      transform: rotate(0.005turn) scale(1.2);
+      transform: rotate(0.005turn) scale(1.1);
     }
     @media screen and (max-width: 400px) {
       margin: 0 auto;
