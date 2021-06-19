@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ratios } from './ratios';
+import { calculateScale } from './calculateScale';
 import ColorSettings from './components/ColorSettings';
+import CopySettings from './components/CopySettings';
 import Examples from './components/Examples';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -10,13 +12,17 @@ import Settings from './components/Settings';
 import TypeScaleSettings from './components/TypeScaleSettings';
 
 function App() {
+  // Initial settings based on Hemidiagon ratio: 1.118
   const [settings, setSettings] = useState({
     ratio: ratios[2][0],
     baseSize: 12,
     scale: 3,
-    sizes: [],
+    sizes: [12, 13.42, 15],
   });
-  const [colors, setColors] = useState({ foreground: '', background: '' });
+  const [colors, setColors] = useState({
+    foreground: '#444444',
+    background: '#8bbbff',
+  });
 
   return (
     <>
@@ -24,7 +30,7 @@ function App() {
       <Main>
         <Settings>
           <TypeScaleSettings
-            updateTypeScale={data => setSettings(data)}
+            updateTypeScale={data => setSettings(calculateScale(data))}
             settings={settings}
           />
           <ColorSettings
@@ -33,7 +39,8 @@ function App() {
           />
         </Settings>
         <Info />
-        <Examples colors={colors} settings={settings} />
+        <CopySettings settings={settings} colors={colors} />
+        <Examples colors={colors} examples={settings.sizes} />
       </Main>
       <Footer />
     </>

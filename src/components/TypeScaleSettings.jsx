@@ -3,12 +3,12 @@ import { ratios } from '../ratios';
 
 const TypeScaleSettings = ({
   updateTypeScale,
-  settings: { ratio, baseSize, scale },
+  settings: { ratio, baseSize, scale, sizes },
 }) => {
   // Generate array of 1-100 integers
   const START = 1,
     END = 100;
-  const sizes = Array.from({ length: END - START }, (x, i) => i + START);
+  const integerArr = Array.from({ length: END - START }, (x, i) => i + START);
 
   return (
     <>
@@ -20,7 +20,7 @@ const TypeScaleSettings = ({
           className='settings__ratio-select'
           name='ratios-select'
           onChange={e =>
-            updateTypeScale({ baseSize, scale, ratio: +e.target.value })
+            updateTypeScale({ baseSize, scale, ratio: +e.target.value, sizes })
           }
           defaultValue={ratio}>
           <option disabled={true}>Orthagon Ratios</option>
@@ -46,10 +46,10 @@ const TypeScaleSettings = ({
           className='settings__ratio-select'
           name='base-size'
           onChange={e =>
-            updateTypeScale({ baseSize: +e.target.value, scale, ratio })
+            updateTypeScale({ baseSize: +e.target.value, scale, ratio, sizes })
           }
           defaultValue={baseSize}>
-          {sizes.map((num, idx) => (
+          {integerArr.map((num, idx) => (
             <option key={idx} val={num}>
               {num}
             </option>
@@ -64,10 +64,10 @@ const TypeScaleSettings = ({
           className='settings__scale-input'
           name='scale'
           onChange={e =>
-            updateTypeScale({ baseSize, ratio, scale: +e.target.value })
+            updateTypeScale({ baseSize, ratio, scale: +e.target.value, sizes })
           }
           defaultValue={scale}>
-          {sizes.map((num, idx) => (
+          {integerArr.map((num, idx) => (
             <option key={idx} val={num}>
               {num}
             </option>
