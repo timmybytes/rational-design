@@ -3,11 +3,11 @@
   flex-flow: row wrap;
   padding: 0.25rem 0;
   justify-content: space-between;
+  padding-top: 15px;
   &__ratio {
-    display: flex;
     margin: 0.25rem 0;
+    display: flex;
     padding-top: 20px;
-    order: 1;
     &-label {
       font-weight: 800;
       margin-right: 10px;
@@ -41,7 +41,6 @@
     margin: 0.25rem 0;
     display: flex;
     padding-top: 20px;
-    order: 2;
     &-label {
       font-weight: 800;
       margin-right: 10px;
@@ -71,7 +70,6 @@
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
-    order: 3;
     &-label {
       font-weight: 800;
       margin-right: 10px;
@@ -96,8 +94,5 @@
       color: $color-darker;
       outline: none;
     }
-  }
-  &__colors {
-    order: 4;
   }
 }

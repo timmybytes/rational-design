@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const InfoPane = () => {
+const Info = () => {
   const [showInfo, setShowInfo] = useState('none');
   const [isActive, setIsActive] = useState('false');
 
@@ -31,4 +31,4 @@ const InfoPane = () => {
     </>
   );
 };
-export default InfoPane;
+export default Info;

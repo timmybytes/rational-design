@@ -12,20 +12,21 @@
   box-shadow: 2px 2px 0 $color-dark;
 }
 .info-pane__button {
+  background: $color-blue;
   margin-left: auto;
   align-self: center;
   padding: 0 7px;
   border: 2px solid $color-dark;
   border-radius: 50%;
+  transition: 0.3s;
   &:hover {
-    background: $color-blue;
     box-shadow: 2px 2px 0 $color-dark;
-    transition: 0.3s;
+    transform: rotate(0.08turn) scale(1.2);
   }
   &-text {
     font-family: inherit;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 800;
   }
 }
 
@@ -33,6 +34,7 @@
   display: none;
   line-height: 1.7;
   padding: 5px 0;
+  transition: 0.3s;
   &-text {
     font-size: 20px;
     margin: 10px auto;
@@ -49,10 +51,10 @@
     color: $color-darker;
     font-weight: bolder;
     padding: 5px;
+    transition: 0.3s;
     &:hover {
       background: $color-blue;
       box-shadow: 4px 4px 0 $color-dark;
-      transition: 0.3s;
     }
   }
 }
