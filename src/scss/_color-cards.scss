@@ -1,12 +1,22 @@
 .color-container {
   display: flex;
-  justify-content: stretch;
+  justify-content: space-between;
   padding: 15px 0;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .color-labels {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
 }
 
 .circle-picker {
   span > div > span > div {
-    box-shadow: none;
     border: 2px solid $color-dark;
+    box-shadow: none;
   }
 }
