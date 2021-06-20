@@ -1,0 +1,42 @@
+.copy-heading {
+  color: $color-darker;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.copy-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 0.5rem 0;
+  button {
+    background: $color-blue;
+    border-radius: 6px;
+    border: 2px solid $color-dark;
+    color: $color-darker;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    min-height: 50px;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 4px 4px 0 #444444;
+      transform: scale(1.05);
+    }
+  }
+  @media screen and (max-width: 400px) {
+    justify-items: stretch;
+  }
+}
+
+.copy-button {
+  background: rgb(139, 187, 255) none repeat scroll 0% 0%;
+  border-radius: 6px;
+  border: 2px solid rgb(68, 68, 68);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0px 0.5rem;
+  padding: 0.25rem 1rem;
+}

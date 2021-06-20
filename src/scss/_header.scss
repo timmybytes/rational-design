@@ -37,15 +37,14 @@
     color: $color-darker;
     display: flex;
     flex-direction: row;
-    margin-top: 25px;
-    margin: 25px;
     min-height: 50px;
     padding: 9px;
     text-decoration: none;
+    transition: 0.3s;
     &:hover {
       background: $color-blue;
       box-shadow: 4px 4px 0 $color-dark;
-      transition: 0.3s;
+      transform: scale(1.05);
     }
     @media screen and (max-width: 400px) {
       margin: 0 auto;
@@ -94,13 +93,13 @@
     font-family: inherit;
     font-weight: 600;
     width: 100%;
+    transition: 0.3s;
     @media screen and (max-width: 440px) {
       font-size: 1rem;
     }
     &:hover {
       background: #8bbbff;
       box-shadow: 4px 4px 0 #444444;
-      transition: 0.3s;
     }
   }
 }

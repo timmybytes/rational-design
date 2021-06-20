@@ -1,31 +1,34 @@
 .info-pane {
+  align-self: center;
   border-bottom: 2px solid $color-dark;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 15px 0;
   padding-bottom: 15px;
-  align-self: center;
 }
 .clicked {
   background-color: $color-blue;
   box-shadow: 2px 2px 0 $color-dark;
+  transform: rotate(0.08turn) scale(1.2);
 }
 .info-pane__button {
-  margin-left: auto;
   align-self: center;
-  padding: 0 7px;
-  border: 2px solid $color-dark;
+  background: $color-blue;
   border-radius: 50%;
+  border: 2px solid $color-dark;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 6px;
+  transition: 0.3s;
   &:hover {
-    background: $color-blue;
     box-shadow: 2px 2px 0 $color-dark;
-    transition: 0.3s;
+    transform: rotate(0.08turn) scale(1.2);
   }
   &-text {
     font-family: inherit;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 800;
   }
 }
 
@@ -33,9 +36,10 @@
   display: none;
   line-height: 1.7;
   padding: 5px 0;
+  transition: 0.3s;
   &-text {
-    font-size: 20px;
-    margin: 10px auto;
+    font-size: 1.2rem;
+    margin: 10px auto 10px 0;
     max-width: 65ch;
     text-align: justify;
     @media screen and (max-width: 400px) {
@@ -49,10 +53,10 @@
     color: $color-darker;
     font-weight: bolder;
     padding: 5px;
+    transition: 0.3s;
     &:hover {
       background: $color-blue;
       box-shadow: 4px 4px 0 $color-dark;
-      transition: 0.3s;
     }
   }
 }

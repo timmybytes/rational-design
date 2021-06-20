@@ -1,23 +1,19 @@
-import React, { useContext } from 'react';
-import SettingsContext from '../contexts/SettingsContext';
+import React from 'react';
 
-const Examples = ({ bgColor, textColor, currentScale }) => {
-  const settings = useContext(SettingsContext);
+const Examples = ({ examples, colors }) => {
   return (
-    <section
+    <div
       className='examples'
-      style={{ background: bgColor, color: textColor }}>
-      {currentScale.map((scale, idx) => {
-        return (
-          <React.Fragment key={idx}>
-            <span className='examples__labels'>{scale}px</span>
-            <p style={{ fontSize: `${scale}px` }} className='examples__lines'>
-              Before we knew it, we were jumping over quick foxes and lazy cows.
-            </p>
-          </React.Fragment>
-        );
-      })}
-    </section>
+      style={{ background: colors.background, color: colors.foreground }}>
+      {examples.map((num, idx) => (
+        <React.Fragment key={idx}>
+          <span className='examples__labels'>{examples[idx]}px</span>
+          <p className='examples__lines' style={{ fontSize: num }}>
+            The quick brown fox jumps over the lazy dog.
+          </p>
+        </React.Fragment>
+      ))}
+    </div>
   );
 };
 

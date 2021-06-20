@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const InfoPane = () => {
+const Info = ({ children }) => {
   const [showInfo, setShowInfo] = useState('none');
   const [isActive, setIsActive] = useState('false');
 
@@ -12,6 +12,7 @@ const InfoPane = () => {
   return (
     <>
       <section className='info-pane'>
+        {children}
         <button
           className={`info-pane__button ${!isActive ? 'clicked' : ''}`}
           onClick={handleClick}>
@@ -26,9 +27,13 @@ const InfoPane = () => {
             scale! Use the increments of the scale to create projects with
             pleasing relational sizes.
           </p>
+          <p className='info-pane__panel-text'>
+            Copy your scale via the buttons below and paste directly into your
+            project!
+          </p>
         </article>
       </section>
     </>
   );
 };
-export default InfoPane;
+export default Info;

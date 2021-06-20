@@ -16,6 +16,7 @@ footer {
     color: $color-dark;
     border-bottom: 2px solid $color-blue;
     text-decoration: none;
+    transition: 0.3s;
     span:hover {
       color: $color-dark;
       border-radius: 4px;
@@ -23,7 +24,6 @@ footer {
       background: $color-blue;
       box-shadow: 2px 2px 0 $color-dark;
       padding: 5px;
-      transition: 0.3s;
     }
   }
 }
