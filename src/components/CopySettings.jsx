@@ -11,12 +11,12 @@ const CopySettings = ({ settings, colors }) => {
 
   useEffect(() => {
     settings.colors = colors;
-    setJSONText(JSON.stringify(settings));
+    setJSONText(JSON.stringify(settings, null, 1));
     // Format settings object/array as strings
     // prettier-ignore
     setSCSSText(`// Generated via https://github.com/timmybytes/rational-design\n
-    // Color Variables
-    $foreground: ${colors.foreground};
+// Color Variables
+$foreground: ${colors.foreground};
 $background: ${colors.background};\n
 // Type-Scale Variables
 $base-font-size: ${settings.baseSize}px;
@@ -44,51 +44,20 @@ ${settings.sizes.map((size, idx) => `  --size-${idx + 1}: ${size}px;\n`).join(''
 
   return (
     <>
-      <p className=''>Click to copy your settings!</p>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-start',
-          justifyItems: 'center',
-          alignItems: 'center',
-        }}>
+      <div className='copy-container'>
         <CopyToClipboard text={scssText} onCopy={() => setSCSSClicked(true)}>
-          <button
-            style={{
-              padding: '.25rem 1rem',
-              margin: '0 .5rem',
-              border: '2px solid #444444',
-              borderRadius: '6px',
-              background: '#8bbbff',
-            }}
-            className='info-pane__button-text'>
-            {!scssClicked ? 'Copy as SCSS' : 'Copied!'}
+          <button className='copy-button'>
+            {!scssClicked ? 'Copy SCSS' : 'Copied!'}
           </button>
         </CopyToClipboard>
         <CopyToClipboard text={cssText} onCopy={() => setCSSClicked(true)}>
-          <button
-            style={{
-              padding: '.25rem 1rem',
-              margin: '0 .5rem',
-              border: '2px solid #444444',
-              borderRadius: '6px',
-              background: '#8bbbff',
-            }}
-            className='info-pane__button-text'>
-            {!cssClicked ? 'Copy as CSS' : 'Copied!'}
+          <button className='copy-button'>
+            {!cssClicked ? 'Copy CSS' : 'Copied!'}
           </button>
         </CopyToClipboard>
         <CopyToClipboard text={jsonText} onCopy={() => setJSONClicked(true)}>
-          <button
-            style={{
-              padding: '.25rem 1rem',
-              margin: '0 .5rem',
-              border: '2px solid #444444',
-              borderRadius: '6px',
-              background: '#8bbbff',
-            }}
-            className='info-pane__button-text'>
-            {!jsonClicked ? 'Copy as JSON' : 'Copied!'}
+          <button className='copy-button'>
+            {!jsonClicked ? 'Copy JSON' : 'Copied!'}
           </button>
         </CopyToClipboard>
       </div>

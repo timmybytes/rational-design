@@ -6,7 +6,7 @@ import CopySettings from './components/CopySettings';
 import Examples from './components/Examples';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Info from './components/InfoPane';
+import Info from './components/Info';
 import Main from './components/Main';
 import Settings from './components/Settings';
 import TypeScaleSettings from './components/TypeScaleSettings';
@@ -37,8 +37,8 @@ function App() {
             updateColors={data => setColors(data)}
             colors={colors}
           />
+          <Info></Info>
         </Settings>
-        <Info />
         <CopySettings settings={settings} colors={colors} />
         <Examples colors={colors} examples={settings.sizes} />
       </Main>

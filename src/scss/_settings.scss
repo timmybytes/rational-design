@@ -1,12 +1,11 @@
 .settings {
   display: flex;
   flex-flow: row wrap;
-  padding: 0.25rem 0;
   justify-content: space-between;
-  padding-top: 15px;
   &__ratio {
     margin: 0.25rem 0;
     display: flex;
+    justify-content: space-between;
     padding-top: 20px;
     &-label {
       font-weight: 800;
@@ -20,6 +19,7 @@
       font-weight: bold;
       padding: 5px;
       border-radius: 4px;
+      cursor: pointer;
       &:hover {
         transition: 0.3s;
         background: $color-blue;
@@ -40,6 +40,7 @@
   &__base {
     margin: 0.25rem 0;
     display: flex;
+    justify-content: space-between;
     padding-top: 20px;
     &-label {
       font-weight: 800;
@@ -50,6 +51,7 @@
     &-input {
       border: 2px solid $color-dark;
       color: $color-darker;
+      cursor: pointer;
       border-radius: 4px;
       font-weight: bold;
       padding: 5px;
@@ -80,6 +82,7 @@
     &-input {
       border: 2px solid $color-dark;
       color: $color-darker;
+      cursor: pointer;
       padding: 5px;
       font-weight: bold;
       border-radius: 4px;
@@ -94,5 +97,71 @@
       color: $color-darker;
       outline: none;
     }
+  }
+  @media screen and (max-width: 400px) {
+    display: block;
+  }
+}
+
+.settings-hide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 15px 0;
+  cursor: pointer;
+  &-text {
+    display: block;
+    padding: 0 0.5rem;
+    transition: 0.3s;
+  }
+  &-button {
+    display: none;
+    display: block;
+    font-size: 1.5rem;
+    background: #8bbbff;
+    // margin-top: 15px;
+    align-self: center;
+    padding: 0 6px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 2px 2px 0 #444444;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.rotate-hide {
+  display: block;
+  animation: 0.1s linear hide;
+  transform: rotate(90deg);
+}
+
+.rotate-show {
+  display: block;
+  animation: 0.1s linear show;
+  transform: rotate(0deg);
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes hide {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

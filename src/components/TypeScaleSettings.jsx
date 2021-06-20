@@ -11,7 +11,7 @@ const TypeScaleSettings = ({
   const integerArr = Array.from({ length: END - START }, (x, i) => i + START);
 
   return (
-    <>
+    <div className='settings'>
       <div className='settings__ratio'>
         <label className='settings__ratio-label' htmlFor='ratios-select'>
           Ratio
@@ -74,7 +74,7 @@ const TypeScaleSettings = ({
           ))}
         </select>
       </div>
-    </>
+    </div>
   );
 };
 

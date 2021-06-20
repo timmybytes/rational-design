@@ -1,11 +1,11 @@
 .info-pane {
+  align-self: center;
   border-bottom: 2px solid $color-dark;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 15px 0;
   padding-bottom: 15px;
-  align-self: center;
 }
 .clicked {
   background-color: $color-blue;
@@ -13,12 +13,13 @@
   transform: rotate(0.08turn) scale(1.2);
 }
 .info-pane__button {
-  background: $color-blue;
-  margin-left: auto;
   align-self: center;
-  padding: 0 6px;
-  border: 2px solid $color-dark;
+  background: $color-blue;
   border-radius: 50%;
+  border: 2px solid $color-dark;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 6px;
   transition: 0.3s;
   &:hover {
     box-shadow: 2px 2px 0 $color-dark;
@@ -37,8 +38,8 @@
   padding: 5px 0;
   transition: 0.3s;
   &-text {
-    font-size: 20px;
-    margin: 10px auto;
+    font-size: 1.2rem;
+    margin: 10px auto 10px 0;
     max-width: 65ch;
     text-align: justify;
     @media screen and (max-width: 400px) {
