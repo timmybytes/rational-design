@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ratios } from './ratios';
 import { calculateScale } from './calculateScale';
 import ColorSettings from './components/ColorSettings';
 import CopySettings from './components/CopySettings';
@@ -10,6 +9,7 @@ import Info from './components/Info';
 import Main from './components/Main';
 import Settings from './components/Settings';
 import TypeScaleSettings from './components/TypeScaleSettings';
+import { ratios } from './ratios';
 
 function App() {
   // Initial settings based on Hemidiagon ratio: 1.118
