@@ -1,5 +1,6 @@
 import { ratios } from './ratios';
 
+// Get scale from
 export function calculateScale({
   ratio = ratios[2][0],
   baseSize = 12,
