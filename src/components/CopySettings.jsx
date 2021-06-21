@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const CopySettings = ({ settings, colors }) => {
@@ -45,17 +45,32 @@ ${settings.sizes.map((size, idx) => `  --size-${idx + 1}: ${size}px;\n`).join(''
   return (
     <>
       <div className='copy-container'>
-        <CopyToClipboard text={scssText} onCopy={() => setSCSSClicked(true)}>
+        <CopyToClipboard
+          text={scssText}
+          onCopy={() => {
+            setSCSSClicked(true);
+            setTimeout(() => setSCSSClicked(false), 1500);
+          }}>
           <button className='copy-button'>
             {!scssClicked ? 'Copy SCSS' : 'Copied!'}
           </button>
         </CopyToClipboard>
-        <CopyToClipboard text={cssText} onCopy={() => setCSSClicked(true)}>
+        <CopyToClipboard
+          text={cssText}
+          onCopy={() => {
+            setCSSClicked(true);
+            setTimeout(() => setCSSClicked(false), 1500);
+          }}>
           <button className='copy-button'>
             {!cssClicked ? 'Copy CSS' : 'Copied!'}
           </button>
         </CopyToClipboard>
-        <CopyToClipboard text={jsonText} onCopy={() => setJSONClicked(true)}>
+        <CopyToClipboard
+          text={jsonText}
+          onCopy={() => {
+            setJSONClicked(true);
+            setTimeout(() => setJSONClicked(false), 1500);
+          }}>
           <button className='copy-button'>
             {!jsonClicked ? 'Copy JSON' : 'Copied!'}
           </button>

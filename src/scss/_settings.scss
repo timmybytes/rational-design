@@ -2,17 +2,17 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  &__label {
+    font-weight: 800;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 1rem;
+  }
   &__ratio {
     margin: 0.25rem 0;
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
-    &-label {
-      font-weight: 800;
-      margin-right: 10px;
-      padding: 5px;
-      font-size: 1rem;
-    }
     &-select {
       border: 2px solid $color-dark;
       color: $color-darker;
@@ -42,12 +42,6 @@
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
-    &-label {
-      font-weight: 800;
-      margin-right: 10px;
-      padding: 5px;
-      font-size: 1rem;
-    }
     &-input {
       border: 2px solid $color-dark;
       color: $color-darker;

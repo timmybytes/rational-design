@@ -13,7 +13,7 @@ const TypeScaleSettings = ({
   return (
     <div className='settings'>
       <div className='settings__ratio'>
-        <label className='settings__ratio-label' htmlFor='ratios-select'>
+        <label className='settings__label' htmlFor='ratios-select'>
           Ratio
         </label>
         <select
@@ -39,7 +39,7 @@ const TypeScaleSettings = ({
         </select>
       </div>
       <div className='settings__base'>
-        <label className='settings__base-label' htmlFor='base-size'>
+        <label className='settings__label' htmlFor='base-size'>
           Base Size (px)
         </label>
         <select
@@ -57,7 +57,7 @@ const TypeScaleSettings = ({
         </select>
       </div>
       <div className='settings__scale'>
-        <label className='settings__scale-label' htmlFor='scale'>
+        <label className='settings__label' htmlFor='scale'>
           Scale
         </label>
         <select
