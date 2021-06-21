@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from '../assets/rational-design-logo.svg';
 import githubLogo from '../assets/github-logo-icon.svg';
+import logo from '../assets/rational-design-logo.svg';
 
 const Header = () => {
   return (
     <>
       <header className='header'>
         <img className='header__logo' src={logo} alt='logo' />
-        <nav className='header__links'>
+        <div className='header__links'>
           <a
             className='header__links-link'
             href='https://github.com/timmybytes/rational-design'
@@ -20,7 +20,7 @@ const Header = () => {
               alt='Github logo'
             />
           </a>
-        </nav>
+        </div>
       </header>
     </>
   );

@@ -99,6 +99,7 @@
 
 .settings-hide {
   display: flex;
+  font-weight: 800;
   justify-content: flex-end;
   align-items: center;
   margin: 15px 0;
@@ -109,11 +110,9 @@
     transition: 0.3s;
   }
   &-button {
-    display: none;
     display: block;
     font-size: 1.5rem;
     background: #8bbbff;
-    // margin-top: 15px;
     align-self: center;
     padding: 0 6px;
     border: 2px solid #444444;
@@ -127,14 +126,16 @@
 }
 
 .rotate-hide {
+  cursor: pointer;
   display: block;
-  animation: 0.1s linear hide;
+  animation: 0.05s linear hide;
   transform: rotate(90deg);
 }
 
 .rotate-show {
+  cursor: pointer;
   display: block;
-  animation: 0.1s linear show;
+  animation: 0.05s linear show;
   transform: rotate(0deg);
 }
 
