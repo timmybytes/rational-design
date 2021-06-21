@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rational-design/static/css/main.279fe1a7.chunk.css",
-    "main.js": "/rational-design/static/js/main.fe0bab22.chunk.js",
-    "main.js.map": "/rational-design/static/js/main.fe0bab22.chunk.js.map",
+    "main.css": "/rational-design/static/css/main.1d9cfafc.chunk.css",
+    "main.js": "/rational-design/static/js/main.1e1eceaa.chunk.js",
+    "main.js.map": "/rational-design/static/js/main.1e1eceaa.chunk.js.map",
     "runtime-main.js": "/rational-design/static/js/runtime-main.e3223fc9.js",
     "runtime-main.js.map": "/rational-design/static/js/runtime-main.e3223fc9.js.map",
-    "static/js/2.d35851d3.chunk.js": "/rational-design/static/js/2.d35851d3.chunk.js",
-    "static/js/2.d35851d3.chunk.js.map": "/rational-design/static/js/2.d35851d3.chunk.js.map",
+    "static/js/2.c8c952fd.chunk.js": "/rational-design/static/js/2.c8c952fd.chunk.js",
+    "static/js/2.c8c952fd.chunk.js.map": "/rational-design/static/js/2.c8c952fd.chunk.js.map",
     "index.html": "/rational-design/index.html",
-    "static/css/main.279fe1a7.chunk.css.map": "/rational-design/static/css/main.279fe1a7.chunk.css.map",
-    "static/js/2.d35851d3.chunk.js.LICENSE.txt": "/rational-design/static/js/2.d35851d3.chunk.js.LICENSE.txt",
+    "static/css/main.1d9cfafc.chunk.css.map": "/rational-design/static/css/main.1d9cfafc.chunk.css.map",
+    "static/js/2.c8c952fd.chunk.js.LICENSE.txt": "/rational-design/static/js/2.c8c952fd.chunk.js.LICENSE.txt",
     "static/media/github-logo-icon.22861d02.svg": "/rational-design/static/media/github-logo-icon.22861d02.svg",
     "static/media/rational-design-logo.3f89b6f4.svg": "/rational-design/static/media/rational-design-logo.3f89b6f4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e3223fc9.js",
-    "static/js/2.d35851d3.chunk.js",
-    "static/css/main.279fe1a7.chunk.css",
-    "static/js/main.fe0bab22.chunk.js"
+    "static/js/2.c8c952fd.chunk.js",
+    "static/css/main.1d9cfafc.chunk.css",
+    "static/js/main.1e1eceaa.chunk.js"
   ]
 }
