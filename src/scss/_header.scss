@@ -42,6 +42,9 @@
     }
     &--icon {
       width: 35px;
+      & svg {
+        fill: $color-blue;
+      }
     }
   }
 }
