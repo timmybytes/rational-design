@@ -9,7 +9,6 @@ const ColorSettings = ({
     <div className='settings__colors'>
       <div className='color-container'>
         <HexColorPicker
-          id='hex-color-picker'
           color={foreground}
           onChange={color => updateColors({ foreground: color, background })}
         />
@@ -19,7 +18,6 @@ const ColorSettings = ({
       </div>
       <div className='color-container'>
         <HexColorPicker
-          id='hex-color-picker'
           color={background}
           onChange={color => updateColors({ foreground, background: color })}
         />

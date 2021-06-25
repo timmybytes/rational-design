@@ -10,7 +10,7 @@ import Main from './components/Main';
 import Settings from './components/Settings';
 import TypeScaleSettings from './components/TypeScaleSettings';
 import { ratios } from './ratios';
-//
+
 function App() {
   // Initial settings based on Hemidiagon ratio: 1.118
   const [settings, setSettings] = useState({
@@ -37,7 +37,7 @@ function App() {
             updateColors={data => setColors(data)}
             colors={colors}
           />
-          <Info></Info>
+          <Info />
         </Settings>
         <CopySettings settings={settings} colors={colors} />
         <Examples colors={colors} examples={settings.sizes} />
