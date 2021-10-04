@@ -6,15 +6,15 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^13.1.9",
-    "gh-pages": "^3.2.2",
+    "@testing-library/user-event": "^13.2.1",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
-    "react-colorful": "^5.2.2",
-    "react-copy-to-clipboard": "^5.0.3",
+    "react-colorful": "^5.5.0",
+    "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
-    "sass": "^1.35.1",
-    "web-vitals": "^2.0.1"
+    "sass": "^1.42.1",
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "predeploy": "npm run build",
